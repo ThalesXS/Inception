@@ -96,3 +96,38 @@ Na última seção foram usadas algumas alguns jargões específicos do Docker q
 - _Docker Daemon_ – O serviço que está a correr no host. Responsável por montar, correr e destribuir Docker _containers_. O _daemon_ é o processo que corre no sistema operacional no qual os _clients_ se comunicam.
 - _Docker Client_ – A ferramenta da linha de comando que permite que usuários interajam com o _daemon_. Existem outras formas de clients - como o [[Kitematic]] que fornece uma GUI aos usuários.
 - _Docker Hub_ – Um registro de _Docker Images_. Funciona como um diretório com todos os _Docker Images_ disponíveis. Caso necessário, é possível alocar suas próprias _Docker registries_ e usa-las para puxar _images_.
+webserver
+## Deploying Web Applications with Docker
+
+#### Static Sites
+
+Foquemos primeiramente em como podemos correr um website estático. Nós iremos primeiro puxar uma _Docker Image_ do _Docker Hub_, correr o _container_ e ver o quão fácil é para correr um _webserver_.
+
+Neste exemplo, usaremos um _website_ de página única feito apenas para esta demo, e que está na _registry_ `prakhar1989/static-site`. É possível realizar o download e correr a _image_ diretamente com uma simples execução do `docker run`.
+```sh
+docker run --rm -it prakhar1989/static-site
+```
+&rdsh; Uma vez que a _image_ não existe localmente, o _client_ irá primeiro buscar a imagem no _registry_, e então correr a _image_. Se tudo correr bem, a mensagem `Nginx is running...` irá ser apresentada no terminal.
+
+Então, uma vez que o servidor está a correr, como podemos visualizar nosso _website_? Em qual porta ele está correndo? E mais importante. como podemos acessar o _container_ diretamente através da nossa máquina _host_? Para já, aperte Ctrl + C para parar nosso _container_.
+
+Neste caso, o _client_ não está expondo quaisquer portas, então precisamos rodar novamente o comando `docker run` para publicar portas. Já agora, iremos também arrumar uma forma para que nosso terminal não fique preso ao _container_ que está a correr. Desta forma, podemos simplesmente fechar o terminal, e o processo continuará a ser executado. Isso é chamado de _**detached** mode_.
+
+```sh
+docker run -d -P --name static-site prakhar1989/static-site
+```
+&rdsh; No comando acima, `-d` é usado para separar o terminal do _container_, `-P` irá divulgar todas as portas expostas, e finalmente, `--name` corresponde ao nome que iremos atribuir ao nosso _container_.
+
+Podemos agora verificar as portas utilizadas através do commando `docker port [CONTAINER]`.
+```sh
+docker port static-site
+```
+&rdsh; Podemos então abrir http://localhost:32769 em nosso browser.
+
+> [!attention] Atenção
+>  Caso esteja a usar o docker-toolbox, é possível que seja necessário usar `docker-machine ip default` para obter o IP.
+
+Também podemos determinar uma porta específica para a qual nosso _client_ irá enviar conexões para o _container_.
+`docker run -p 8888:80 prakhar1989/static-site`
+
+Para terminar um _container_ que foi separado (em _detached mode_), usamos o comando `docker run`, especificando o container ID, ou o nome que definimos com `--name`
