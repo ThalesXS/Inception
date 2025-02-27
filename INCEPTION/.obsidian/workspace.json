@@ -1,0 +1,197 @@
+{
+  "main": {
+    "id": "f172ffb276817ff6",
+    "type": "split",
+    "children": [
+      {
+        "id": "04d1adae5ae6837f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "abb1ccab9ccd6e77",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Guide"
+            }
+          },
+          {
+            "id": "b9a8dbf554bf8697",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Commands.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Commands"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "173fd400258cdaf8",
+    "type": "split",
+    "children": [
+      {
+        "id": "81da8d0d5f2f1f6a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "537aff858f8b310d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "fb454b5ed04fa269",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "5f6e5918be9b5181",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "dc78e18a57af5a6e",
+    "type": "split",
+    "children": [
+      {
+        "id": "fdb78d5a29f4b26a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8810eaae0c4b1e13",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Guide.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Guide"
+            }
+          },
+          {
+            "id": "7fd761cf1c88990b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Guide.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Guide"
+            }
+          },
+          {
+            "id": "986ecf6b1b5c0421",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "998174be49e6b269",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Guide.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Guide"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "abb1ccab9ccd6e77",
+  "lastOpenFiles": [
+    "Commands.md",
+    "Guide.md",
+    "Docker.md",
+    "Callouts (MD).md",
+    "Docker Images.md",
+    "Docker Compose.md",
+    "Docker Registry.md",
+    "Dockerfile.md",
+    "Welcome.md"
+  ]
+}
